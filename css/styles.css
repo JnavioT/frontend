@@ -161,7 +161,7 @@ section:nth-of-type(5) > p{
 
 
 footer{
-    padding: 3rem 0;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
  background-color: var(--BLACKALT);
@@ -199,9 +199,24 @@ footer nav > ul {
     padding: 3rem 0;
 }
 
-footer input{
-
+footer form > input{
+    border-radius: 999px;
+    border: none;
+    background-color: var(--WHITEALT);
+    padding: 2ch 1ch;
+    width: 100%;
 }
+
+footer form {
+    display: flex;
+    width: 100%;
+    gap: 1ch;
+}
+
+footer form> button{
+    padding: 1ch 3ch;
+}
+
 
 nav li{
     list-style: none;
@@ -215,6 +230,6 @@ nav li > a{
 #redes-sociales{
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
