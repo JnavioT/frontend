@@ -14,6 +14,7 @@
     --WHITEALT: #FAFAFA;
     --BLACKALT: #1E1E26;
     --GRAYTEXT: #8C8C94;
+    
 }
 
 
@@ -29,9 +30,14 @@ header{
     display: flex;
     padding: 3rem ;
     justify-content: space-between;
+    align-items: center;
 }
 
 header > nav{
+    display: none;
+}
+
+header button{
     display: none;
 }
 
@@ -72,6 +78,7 @@ section:nth-of-type(1) > article > button {
     margin-bottom: 2rem;
 }
 
+
 section:nth-of-type(2) {
     display: flex;
     flex-direction: column;
@@ -82,7 +89,6 @@ section:nth-of-type(2) {
     text-align: left;
     letter-spacing: -0.005em;
     padding: 3rem 1rem;
-
 }
 
 section:nth-of-type(2) > h2{
@@ -190,13 +196,11 @@ section:nth-of-type(5) {
     align-items: center;
     letter-spacing: -0.005em;
     padding: 3rem 1rem;
-
 }
 
 section:nth-of-type(5) > h2{
     font-weight: 700;
     font-size: 2rem;
-
 }
 
 section:nth-of-type(5) > button{
@@ -215,12 +219,12 @@ footer{
  align-items: center;
 }
 
-footer > svg{
+footer svg{
     max-width: 8rem;
     margin: 3rem;
 }
 
-footer > svg :nth-child(n+2){
+footer svg :nth-child(n+2){
     fill: var(--WHITEALT);
 }
 
@@ -237,6 +241,10 @@ button{
     color: var(--WHITEALT);
     padding: 14px 3rem;
     cursor: pointer;
+}
+
+button:hover{
+    background-color: rgba(139, 72, 191, 0.70);
 }
 
 footer nav > ul {
@@ -264,6 +272,11 @@ footer form> button{
     padding: 1ch 3ch;
 }
 
+footer> div{
+    display: contents;
+    
+}
+
 
 nav li{
     list-style: none;
@@ -281,20 +294,186 @@ nav li > a{
 }
 
 @media (min-width:1250px) {
-body{
+
+header{
+    padding: 4rem 10rem;
+}
+
+header > nav{
+display: block;
+}
+
+header > nav > ul{
+    display: flex;
+    gap: 2rem;
+}
+
+header > nav > ul a{
+    font-size: 13px;
+    color: var(--DARKBLUE);
 
 }
+header > nav > ul a:hover{
+    color: var(--GRAYTEXT);
+}
+
+header button{
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 4px 8px 0;
+
+}
+
+#hamburger{
+    display: none;
+}
+
 section:nth-of-type(1){
     height: 85vh;
     flex-direction: row;
-    padding: 2rem;
+    padding: 6rem;
 }
 
 section:nth-of-type(1) > article{
+    max-width: 500px;
+    gap:2rem;
     
 }
-section:nth-of-type(1) > button {
+section:nth-of-type(1) > img {
+    max-height: 470px;
 }
 
 
+section:nth-of-type(2) {
+    display: flex;
+    flex-direction: row;
+    gap: 3.5rem;
+    background-color: var(--PURPLE);
+    color: #FFFFFF;
+    font-family: 'Be Vietnam Pro';
+    text-align: left;
+    letter-spacing: -0.005em;
+    padding: 3rem 4rem;
+    
 }
+
+section:nth-of-type(2) > h2{
+    font-weight: 700;
+    font-size: 36px;
+    margin-left: 10rem;
+    max-width: 600px;
+}
+
+section:nth-of-type(2) > p{
+    font-size: 16px;
+    align-content: center;
+    justify-content: center;
+    margin-right: 10rem;
+}
+    
+section:nth-of-type(3){
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 7rem;
+    background-color: var(--WHITEALT);
+}
+section:nth-of-type(3) > article{
+    max-width: 560px;
+    padding: 1rem;
+}
+section:nth-of-type(3) > article > h3{
+    background-color: transparent;
+    position: relative;
+}
+section:nth-of-type(3) > article > h3 > span{
+    position: absolute;
+    translate: -100%;
+    left: -1ch;
+}
+
+   
+section:nth-of-type(5) {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    background-color: var(--PURPLE);
+    color: #FFFFFF;
+    font-family: 'Be Vietnam Pro';
+
+    justify-content: space-between;
+    letter-spacing: -0.005em;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+section:nth-of-type(5) > h2{
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 3rem 3rem;
+    max-width: 500px;
+    text-align: left;
+    margin-left: 10rem;
+}
+
+section:nth-of-type(5) > button{
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--PURPLE);;
+    background-color: var(--WHITEALT);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 4px 8px 0;
+    padding: 1rem 3rem;
+    margin-right: 10rem;
+}
+
+section:nth-of-type(4){
+    margin-bottom: 7rem;
+}
+section:nth-of-type(4) > article > :nth-child(odd){
+    display: flex;
+
+}
+
+section:nth-of-type(4) > article{
+    padding: 0 3rem;
+    gap: 4rem;
+
+}
+
+footer{
+    position: relative;
+    flex-direction: row-reverse;
+    padding: 2rem 7rem;
+    justify-content: space-between;
+}
+footer>p{
+    position: absolute;
+    bottom: 2.5rem;
+}
+#redes-sociales{
+    gap: 2ch;
+}
+
+footer > div{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: start;
+    gap: 2.5rem;
+}
+
+footer > div > svg{
+    margin:unset;
+}
+
+footer > nav{
+    flex-basis: 550px;
+}
+footer > form{
+    flex-basis:270px;
+}
+
+}
+
+
+
