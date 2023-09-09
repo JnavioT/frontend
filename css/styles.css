@@ -7,19 +7,23 @@
     padding: 0;
 }
 
-body{
-    background-color: var(--WHITEALT);
-    display: flex;
-    flex-direction: column;
-    
+:root{
     --LIGHTBLUE: #3CDDF3;
     --DARKBLUE: #232C50;
     --PURPLE: #8B48BF;
     --WHITEALT: #FAFAFA;
     --BLACKALT: #1E1E26;
+    --GRAYTEXT: #8C8C94;
+}
 
+
+body{
+    background-color: var(--WHITEALT);
+    display: flex;
+    flex-direction: column;
     font-family: sans-serif;
 }
+
 
 header{
     display: flex;
@@ -133,7 +137,47 @@ section:nth-of-type(3) > article > p{
     margin-left: -0.5rem; 
 }
 
+section:nth-of-type(4){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 2.5rem 4rem 2.5rem;
+    gap: 4rem;
+}
 
+section:nth-of-type(4) > article{
+    display: flex;
+
+}
+
+section:nth-of-type(4) > h2{
+    font-size: 1.7rem;
+    color: var(--DARKBLUE);
+
+}
+section:nth-of-type(4) > article > :nth-child(odd){
+    display: none;
+}
+
+section:nth-of-type(4) > article > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+section:nth-of-type(4) > article > div > p:nth-of-type(1){
+    color: var(--DARKBLUE);
+    
+    font-weight: 600;
+}
+
+section:nth-of-type(4) > article > div > p:nth-of-type(2){
+    color: var(--GRAYTEXT);
+    font-size: 14px;
+    text-align: center;
+    line-height: 2.4ch;
+}
 section:nth-of-type(5) {
     display: flex;
     flex-direction: column;
@@ -142,7 +186,7 @@ section:nth-of-type(5) {
     color: #FFFFFF;
     font-family: 'Be Vietnam Pro';
     text-align: center;
-
+    align-items: center;
     letter-spacing: -0.005em;
     padding: 3rem 1rem;
 
@@ -154,8 +198,10 @@ section:nth-of-type(5) > h2{
 
 }
 
-section:nth-of-type(5) > p{
+section:nth-of-type(5) > button{
     font-size: 12px;
+    background-color: var(--DARKBLUE);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 4px 8px 0;
 }
 
 
@@ -178,7 +224,7 @@ footer > svg :nth-child(n+2){
 }
 
 footer > p {
-color: #8C8C94;
+color: var(--GRAYTEXT);
 font-size: 12px;
 }
 
